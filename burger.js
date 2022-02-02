@@ -12,4 +12,16 @@ burger.addEventListener('click',()=>{
     navbarHeader.classList.toggle('h-nav-resp');
     navbar.classList.toggle('h-nav-resp');
 })
-
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $("#scroll").fadeIn();
+    } else {
+      $("#scroll").fadeOut();
+    }
+  });
+  $("#scroll").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 600);
+    return false;
+  });
+});
